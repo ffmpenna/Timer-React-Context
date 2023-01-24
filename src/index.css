@@ -117,6 +117,7 @@ cursor: default;
   transform: scaleX(-1);
 }
 
+
 .start-btn-container {
   display: flex;
   justify-content: center;
@@ -139,7 +140,7 @@ cursor: default;
   cursor: pointer;
   display: flex;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 18px;
   justify-content: center;
   line-height: 28px;
@@ -164,6 +165,15 @@ cursor: default;
   position: absolute;
   bottom: 10px;
   left: 10px;
+}
+
+.start-btn:disabled {
+  color: rgb(202, 202, 202);
+  background: linear-gradient(
+    90deg,
+    rgb(119, 147, 180) 0%,
+    rgb(179, 130, 150) 100%
+  );
 }
 
 .teste {

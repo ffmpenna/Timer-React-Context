@@ -69,7 +69,7 @@ function Provider({ children }) {
   }, [timeLeft, isTimerRunning, updateRemainingSeconds, updateRemainingMinutes])
 
   useEffect(() => {
-    if (timeLeft.minutes < 1 && timeLeft.seconds < 1 && isTimerRunning) {
+    if (timeLeft.minutes < 1 && timeLeft.seconds < 1 && !hasTimerEnded) {
       toggleTimer(false);
       stopTimer(true);
       setMusic('');
@@ -78,7 +78,7 @@ function Provider({ children }) {
       audio.play();
     }
 
-  }, [timeLeft, isTimerRunning]);
+  }, [timeLeft, hasTimerEnded]);
 
 
 

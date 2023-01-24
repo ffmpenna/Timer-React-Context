@@ -1,5 +1,4 @@
-import React, { useContext } from 'react'
-import MyContext from '../context/MyContext'
+import React from 'react'
 import StartBtn from './StartBtn'
 // import formatTimeLeft from '../utils/formatTimeLeft'
 

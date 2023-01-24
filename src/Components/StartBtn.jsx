@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import MyContext from '../context/MyContext'
 
 function StartBtn() {
-  const { toggleTimer, isTimerRunning, stopTimer, hasTimerEnded } = useContext(MyContext)
+  const { toggleTimer, isTimerRunning, stopTimer, hasTimerEnded, timeLeft } = useContext(MyContext)
   const startOrPause = isTimerRunning ? 'PAUSE' : 'START'
 
   const teste = () => {
@@ -13,9 +13,15 @@ function StartBtn() {
       toggleTimer(!isTimerRunning);
     }
   }
+
+  const teste2 = () => {
+    if(timeLeft.minutes < 1 && timeLeft.seconds < 1 && hasTimerEnded)
+    return true;
+    else return false;
+  }
   return (
     <div>
-      <button className='start-btn' onClick={teste}>{startOrPause}</button>
+      <button disabled={teste2()}  className='start-btn' onClick={teste}>{startOrPause}</button>
     </div>
   )
 }
